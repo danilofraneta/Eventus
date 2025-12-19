@@ -1,0 +1,120 @@
+.cover {
+    overflow: hidden;
+    padding-bottom: 50px;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.cover:hover .cover-slide {
+    animation-play-state: paused;
+}
+
+.cover-slide {
+    animation: slide 30s infinite linear;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+}
+
+
+.cover-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 13px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 926px));
+        /*ovo mjenjam za duzinu niza*/
+    }
+}
+
+.cover-item img {
+    height: 230px;
+    border-radius: 15px;
+}
+
+.cover-bg {
+    width: 270px;
+    height: 385px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cover-bg:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+
+    .bi-play-circle {
+        color: rgba(255, 255, 255, 1.0);
+    }
+
+    .bi-heart {
+        color: rgba(255, 255, 255, 1.0);
+    }
+
+    .bi-heart-fill {
+        color: rgba(255, 255, 255, 1.0);
+    }
+}
+
+.ime {
+    color: black;
+    font-size: large;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.opis {
+    font-size: medium;
+    color: rgb(75, 70, 70);
+}
+
+.bi-heart {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 140px;
+    right: 30px;
+    font-size: 20px;
+    transition: font-size 0.3s ease;
+}
+
+.bi-heart:hover {
+    font-size: 23px;
+}
+
+.bi-play-circle {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 140px;
+    right: 59px;
+    font-size: 21px;
+    transition: font-size 0.3s ease;
+}
+
+.bi-play-circle:hover {
+    font-size: 25px;
+}
+
+.bi-heart-fill {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 140px;
+    right: 30px;
+    font-size: 20px;
+    transition: font-size 0.3s ease;
+}
+
+.bi-heart-fill:hover {
+    font-size: 23px;
+}
+
+/**/

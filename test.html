@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Web Playback SDK Quick Start</title>
+</head>
+
+<body>
+    <h1>Spotify Web Playback SDK Quick Start</h1>
+    <button id="togglePlay">Toggle Play</button>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+        let token; // Pomeren token na globalni nivo
+
+        window.onSpotifyWebPlaybackSDKReady = () => {
+            token = 'BQA_OKESxwHFXLx6YrMch0i_3ZC95kjiWns_0fh47pnLoJ1cMiEdEratBSmiKjOZq7s1eS8_U4kO0aVYV0hvYHygW_qo5C0TTKAj_njxIj9Fh1bIti6BeoUhtCvZLX8jJ8WrvAgb6EkWSoLtsDTxtsZcrBjXjmgKq9I0HPftIHNrdBfEdhQ6r1-est066-F6guf629vuimy9fz3Z53UFSdJiYV5n';
+            const player = new Spotify.Player({
+                name: 'Zavrsni rad PRAVI',
+                getOAuthToken: cb => { cb(token); },
+                volume: 0.5
+            });
+
+            // Ready
+            player.addListener('ready', ({ device_id }) => {
+                console.log('Ready with Device ID', device_id);
+
+                // After player is ready, change current device to this player
+                const connect_to_device = () => {
+                    console.log("Changing to device");
+                    let change_device = fetch("https://api.spotify.com/v1/me/player", {
+                        method: "PUT",
+                        body: JSON.stringify({
+                            device_ids: [device_id],
+                            play: false,
+                        }),
+                        headers: new Headers({
+                            Authorization: "Bearer " + token,
+                        }),
+                    }).then((response) => console.log(response));
+                };
+                connect_to_device();
+            });
+
+            // Not Ready
+            player.addListener('not_ready', ({ device_id }) => {
+                console.log('Device ID has gone offline', device_id);
+            });
+
+            player.addListener('initialization_error', ({ message }) => {
+                console.error(message);
+            });
+
+            player.addListener('authentication_error', ({ message }) => {
+                console.error(message);
+            });
+
+            player.addListener('account_error', ({ message }) => {
+                console.error(message);
+            });
+
+            // Start device connection
+            player.connect().then((success) => {
+                if (success) {
+                    console.log("The Web Playback SDK successfully connected to Spotify!");
+                }
+            });
+
+            document.getElementById('togglePlay').onclick = function () {
+                play_song();
+            };
+        };
+
+        const play_song = async () => {
+            const uri = "spotify:track:3rUGC1vUpkDG9CZFHMur1t"; // Vaš URI pesme
+            console.log("Playing song");
+
+            try {
+                let request_answer = await fetch(
+                    "https://api.spotify.com/v1/me/player/play",
+                    {
+                        method: "PUT",
+                        body: JSON.stringify({
+                            uris: [uri],
+                        }),
+                        headers: new Headers({
+                            Authorization: "Bearer " + token,
+                        }),
+                    }
+                );
+
+                // Dodajte proveru statusa odgovora ako je potrebno
+                if (request_answer.ok) {
+                    console.log("Song played successfully");
+                } else {
+                    console.error("Failed to play song. Status:", request_answer.status);
+                }
+            } catch (error) {
+                console.error("Error playing song:", error);
+            }
+        };
+    </script>
+</body>
+
+</html>

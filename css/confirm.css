@@ -1,0 +1,365 @@
+.pad {
+    margin: 30px;
+}
+
+.slikaIza {
+    filter: blur(50px);
+    position: fixed;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.back {
+    border: none;
+    border-radius: 15px;
+    padding: 5px 12px 5px 12px;
+    font-size: 15px;
+    position: absolute;
+    left: 10%;
+}
+
+.back:hover {
+    background: none;
+    color: white;
+    transition: 0.7s;
+}
+
+.korka1 {
+    font-size: 15px;
+}
+
+.ukratko {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.slika {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+}
+
+.datum {
+    color: #FBF719;
+}
+
+.lokacija {
+    color: rgb(132, 132, 132);
+}
+
+.l {
+    text-align: right;
+    margin-right: -20px;
+}
+
+.d {
+    text-align: left;
+    margin-left: -20px;
+    margin-top: 17px;
+}
+
+.sveKarte {
+    margin: auto;
+    color: black;
+    width: 450px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 5px;
+    font-size: 60px;
+    margin: auto;
+}
+
+.quantity-wrapper input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.quantity-wrapper input[type="number"]::-webkit-inner-spin-button,
+.quantity-wrapper input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-wrapper button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+    font-size: 60px;
+}
+
+.quantity-wrapper button:focus {
+    outline: none;
+}
+
+
+.confirmDugme {
+    background-color: #FBF719;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    margin: 20px;
+    font-weight: 500;
+}
+
+.confirmDugme:hover {
+    filter: drop-shadow(0 0 0.75rem #abaaaa);
+    transition: 0.3s;
+    color: rgb(22, 25, 35);
+}
+
+
+
+
+
+
+
+
+
+.kartice {
+    width: 60%;
+}
+
+.kartica {
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 15px;
+    padding: 10px 40px 30px 40px;
+    text-align: left;
+    font-size: 17px;
+    max-width: 500px;
+}
+
+.cardNumber {
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    background: none;
+    border: solid 1px white;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.137);
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-container input[type="text"] {
+    padding-left: 40px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.drugiRed {
+    color: white;
+    width: 130%;
+    border-radius: 10px;
+    padding: 5px;
+    background: none;
+    border: solid 1px white;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.137);
+}
+
+
+
+.drugiRed2 {
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    background: none;
+    border: solid 1px white;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.137);
+}
+
+.gore {
+    margin-top: 30px;
+}
+
+.linija {
+    width: 350px;
+    margin-bottom: 30px;
+    filter: opacity(50%);
+    margin-bottom: 15px;
+}
+
+.order {
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 13%;
+    margin-bottom: -3px;
+}
+
+.sum {
+    text-align: left;
+    margin-left: 13%;
+    color: #abaaaa;
+}
+
+.total {
+    text-align: left;
+    margin-left: 13%;
+    color: #abaaaa;
+    font-size: xx-large;
+}
+
+.buyDugme {
+    width: 60%;
+    margin-left: 20%;
+    background-color: #FBF719;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.buyDugme:hover {
+    filter: drop-shadow(0 0 0.75rem #abaaaa);
+    transition: 0.3s;
+    color: rgb(22, 25, 35);
+}
+
+
+
+
+
+.kupljeno {
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #a9a9a943;
+
+}
+
+.iks {
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    color: black;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    width: 130px;
+}
+
+.iks:hover {
+    background: #ff3b3b;
+    color: white;
+    transition: 0.5s;
+}
+
+button .comment {
+    display: none;
+}
+
+button:hover .replies {
+    display: none;
+}
+
+button:hover .comment {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0000005f;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #fffb00;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+
+
+
+
+
+h5 {
+    font-weight: bolder;
+    text-align: left;
+    margin: 10px;
+}
+
+.jedan {
+    background: #666;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.kraj {
+    text-align: left;
+    padding: 20px;
+}

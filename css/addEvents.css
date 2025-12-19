@@ -1,0 +1,177 @@
+.tekst {
+    border-radius: 10px;
+    height: 47px;
+    padding-left: 10px;
+    background: #ffffff;
+    border: 1px solid black;
+}
+
+.te {
+    font-size: 17px;
+    margin-top: 15px;
+    color: #999999;
+    text-align: left;
+    padding-left: 11px;
+    margin-bottom: 2px;
+
+}
+
+.g {
+    background: #252525;
+    color: rgb(255, 255, 255);
+}
+
+.ta {
+    border-radius: 10px;
+    height: 147px;
+    padding-left: 10px;
+    width: 270px;
+    font-size: 17px;
+}
+
+.datum {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    border: 1px solid white;
+    color: black;
+    width: 275px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 17px;
+    align-content: center;
+}
+
+.poz {
+    background-color: #302f2f;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+}
+
+.up {
+    font-size: 17px;
+    background-color: white;
+    margin-top: 45px;
+}
+
+.profilePhoto {
+    margin-top: 15px;
+    font-size: 15px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #0b0322 85%, #492883 100%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profilePhotoEdit {
+    margin-top: 15px;
+    font-size: 15px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Stil za label */
+.profilePhoto label {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Stil za sliku */
+.profilePhoto img {
+    display: none;
+}
+
+
+
+input[type="file"] {
+    outline: none;
+    padding: 4px;
+    margin: -4px;
+}
+
+input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+    outline: 2px solid #0964b0;
+    outline-offset: 2px;
+}
+
+input[type="file"]::before {
+    top: 16px;
+}
+
+input[type="file"]::after {
+    top: 14px;
+}
+
+
+input[type="file"] {
+    position: relative;
+}
+
+input[type="file"]::file-selector-button {
+    width: 126px;
+    color: transparent;
+}
+
+input[type="file"]::before {
+    position: absolute;
+    pointer-events: none;
+    top: 13px;
+    left: 33px;
+    color: #0964b0;
+    content: "Upload photo";
+    font-size: 14px;
+}
+
+input[type="file"]::after {
+    position: absolute;
+    pointer-events: none;
+    /*   top: 10px; */
+    left: 12px;
+    height: 18px;
+    width: 18px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+    border-radius: 9px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #252525;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 10px;
+    transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+    background-color: #ffffff;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+    background-color: #1a5cdf;
+}

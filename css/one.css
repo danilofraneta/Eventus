@@ -1,0 +1,89 @@
+.slikaIza {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    filter: blur(40px) opacity(60%);
+    margin-top: -110px;
+}
+
+.slika {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    margin-top: -440px;
+    
+}
+
+.eventIme {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+.sveInfo {
+    text-align: left;
+    height: 600px;
+    margin-top: -50px;
+}
+
+.kupiDugme {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    margin: 30px;
+    margin-top: -30px;
+    font-weight: 500;
+}
+
+.kupiDugme:hover {
+    background-color: #FBF719;
+    transition: 0.3s;
+}
+
+.datum {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.cijena {
+    text-decoration: none;
+    margin-bottom: 0px;
+    color: #FBF719;
+}
+
+.about {
+    font-weight: bold;
+    font-size: large;
+}
+
+.oEventu {
+    font-size: 17px;
+    background: #1b1b1b;
+    padding: 15px;
+    border-radius: 15px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* Uklanja horizontalni scrollbar */
+}
+
+.dugmad {
+    font-size: 17px;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 5px 10px 0px;
+    background: none;
+    border: solid 1px white;
+}
+
+.dugmad:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
